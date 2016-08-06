@@ -2,5 +2,11 @@
 @import 'breakpoints';
 @import 'grid';
 @import 'typography';
+@import 'colors';
 
-// Project styles here!
+
+// Include the required mixins
+@include typography();
+@include FlatUIColors();
+
+// Generic Styles
