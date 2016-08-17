@@ -15,15 +15,32 @@ module.exports = function(grunt) {
         },
         watch: {
             src: {
-                files: ['Assets/css/src/*.scss'],
+                files: ['assets/css/src/*.scss', 'assets/js/src/*.jsx'],
                 tasks: ['default'],
+            }
+        },
+        babel: {
+            options: {
+                plugins: ['transform-react-jsx'],
+                presets: ['es2015', 'react']
+            },
+            jsx: {
+                files: [{
+                    expand: true,
+                    cwd: './assets/js/src/view',
+                    src: ['*.jsx'],
+                    dest: './assets/js/prod/view/main.js'
+                    ext: '.js'
+                }]
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-babel');
 
     // Default task(s).
-    grunt.registerTask('default', ['sass']);
+    grunt.registerTask('default', ['sass', 'babel']);
+
 };
