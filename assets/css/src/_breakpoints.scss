@@ -12,33 +12,33 @@ $xl: 50.00em;
 
 /* Larger than mobile */
 @mixin phone {
-	@media (min-width: $phone) {
+	@media screen and (min-width: $phone) {
 		@content;
 	}	
 }
 
 /* Larger than phablet */
 @mixin phablet {
-	@media (min-width: $phablet) {
+	@media screen and (min-width: $phablet) {
 		@content;
 	}
 }
 
 /* Larger than tablet */
 @mixin tablet {
-	@media (min-width: $tablet) {
+	@media screen and (min-width: $tablet) {
 		@content;
 	}
 }
 /* Larger than desktop */
 @mixin desktop {
-	@media (min-width: $desktop) {
+	@media screen and (min-width: $desktop) {
 		@content;
 	}
 }
 /* Larger than Desktop HD */
 @mixin xl {
-	@media (min-width: $xl) {
+	@media screen and (min-width: $xl) {
 		@content;
 	}
 }
