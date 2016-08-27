@@ -13,12 +13,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        watch: {
-            src: {
-                files: ['assets/css/src/*.scss', 'assets/js/src/*.jsx'],
-                tasks: ['default'],
-            }
-        },
         babel: {
             options: {
                 plugins: ['transform-react-jsx'],
@@ -37,10 +31,11 @@ module.exports = function(grunt) {
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-babel');
 
     // Default task(s).
     grunt.registerTask('default', ['sass', 'babel']);
+    grunt.registerTask('css', ['sass']);
+    grunt.registerTask('js', ['babel']);
 
 };
