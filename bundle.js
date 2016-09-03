@@ -56,15 +56,15 @@
 	
 	var _components = __webpack_require__(172);
 	
-	var _components2 = _interopRequireDefault(_components);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var css = __webpack_require__(173);
 	
 	// import App from './assets/js/app'
 	
-	_reactDom2.default.render(_react2.default.createElement(_components2.default, null), document.getElementById('app'));
+	_reactDom2.default.render(_react2.default.createElement(_components.Header, null), document.getElementById('header'));
+	_reactDom2.default.render(_react2.default.createElement(_components.Main, null), document.getElementById('main'));
+	_reactDom2.default.render(_react2.default.createElement(_components.Footer, null), document.getElementById('footer'));
 
 /***/ },
 /* 1 */
@@ -21446,6 +21446,7 @@
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
+	exports.Footer = exports.Main = exports.Header = undefined;
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
@@ -21461,30 +21462,80 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var View = function (_React$Component) {
-		_inherits(View, _React$Component);
+	var Header = exports.Header = function (_React$Component) {
+		_inherits(Header, _React$Component);
 	
-		function View() {
-			_classCallCheck(this, View);
+		function Header() {
+			_classCallCheck(this, Header);
 	
-			return _possibleConstructorReturn(this, (View.__proto__ || Object.getPrototypeOf(View)).apply(this, arguments));
+			return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
 		}
 	
-		_createClass(View, [{
+		_createClass(Header, [{
 			key: 'render',
 			value: function render() {
 				return _react2.default.createElement(
 					'h1',
 					null,
-					'Test'
+					'Header'
 				);
 			}
 		}]);
 	
-		return View;
+		return Header;
 	}(_react2.default.Component);
 	
-	exports.default = View;
+	;
+	
+	var Main = exports.Main = function (_React$Component2) {
+		_inherits(Main, _React$Component2);
+	
+		function Main() {
+			_classCallCheck(this, Main);
+	
+			return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
+		}
+	
+		_createClass(Main, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'h1',
+					null,
+					'Main'
+				);
+			}
+		}]);
+	
+		return Main;
+	}(_react2.default.Component);
+	
+	;
+	
+	var Footer = exports.Footer = function (_React$Component3) {
+		_inherits(Footer, _React$Component3);
+	
+		function Footer() {
+			_classCallCheck(this, Footer);
+	
+			return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+		}
+	
+		_createClass(Footer, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'h1',
+					null,
+					'Footer'
+				);
+			}
+		}]);
+	
+		return Footer;
+	}(_react2.default.Component);
+	
+	;
 
 /***/ },
 /* 173 */
