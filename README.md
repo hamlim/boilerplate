@@ -1,20 +1,6 @@
 # boilerplate
-A basic boilerplate for any new project
 
+## A simple webpack based set of files/settings to help you quickly start a website.
 
-## Filemap:
+I made boilerplate to satisfy my need for a basic default when I want to start a website. Before this I had worked on Basi.css which was really just a custom css file that could be dropped into any project and would help with prototyping. boilerplate is a bit different, it serves as the default, so you can pull in boilerplate when starting and build your site around it. The css is all meant to be hacked on and extended, the defaults are all really primative also. (Heck the reset's are just setting every element to `box-sizing: border-box` and setting `margin: 0; padding: 0`.)
 
-### Favicons:
-
-All favicons go in the favicons folder (`./assets/files/omages/favicons/`):
-if the favicon is specific to windows, macosx, ios then it goes in the folder it is specific to (windows -> `..../favicons/windows/`)
-(ios -> `..../favicons/apple/ios` and macosx -> `..../favicons/apple/osx`)
-
-### Stylesheets:
-
-All stylesheets are either directly linked to "http://example.com/cdn/style.css" or they are placed in `./assets/css/lib` or `./assets/css/`.
-The lib directory is saved for only external stylesheets, all internal (site specific stylesheets are placed in the root css folder)
-
-## Scripts:
-
-All scripts follow the same rules as the stylesheets except they are stored in the `./assets/js/` folders.
