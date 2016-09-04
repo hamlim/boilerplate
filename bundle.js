@@ -62,6 +62,7 @@
 	
 	// import App from './assets/js/app'
 	
+	
 	_reactDom2.default.render(_react2.default.createElement(_components.Header, null), document.getElementById('header'));
 	_reactDom2.default.render(_react2.default.createElement(_components.Main, null), document.getElementById('main'));
 	_reactDom2.default.render(_react2.default.createElement(_components.Footer, null), document.getElementById('footer'));
@@ -21441,7 +21442,7 @@
 /* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -21472,12 +21473,21 @@
 		}
 	
 		_createClass(Header, [{
-			key: 'render',
+			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
-					'h1',
-					null,
-					'Header'
+					"header",
+					{ className: "header" },
+					_react2.default.createElement(
+						"h1",
+						null,
+						"boilerplate"
+					),
+					_react2.default.createElement(
+						"h2",
+						null,
+						"A simple webpack based set of files/settings to help you quickly start a website"
+					)
 				);
 			}
 		}]);
@@ -21497,12 +21507,113 @@
 		}
 	
 		_createClass(Main, [{
-			key: 'render',
+			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
-					'h1',
-					null,
-					'Main'
+					"main",
+					{ className: "main" },
+					_react2.default.createElement(
+						"article",
+						{ className: "article" },
+						_react2.default.createElement(
+							"section",
+							{ className: "lead" },
+							_react2.default.createElement(
+								"h3",
+								null,
+								"About boilerplate:"
+							),
+							_react2.default.createElement(
+								"p",
+								null,
+								"I made boilerplate to satisfy my need for a basic default when I want to start a website. Before this I had worked on Basi.css which was really just a custom css file that could be dropped into any project and would help with prototyping. boilerplate is a bit different, it serves as the default, so you can pull in boilerplate when starting and build your site around it. The css is all meant to be hacked on and extended, the defaults are all really primative also. (Heck the reset's are just setting every element to ",
+								_react2.default.createElement(
+									"code",
+									null,
+									"box-sizing: border-box"
+								),
+								" and setting ",
+								_react2.default.createElement(
+									"code",
+									null,
+									"margin: 0; padding: 0"
+								),
+								".)"
+							),
+							_react2.default.createElement(
+								"p",
+								null,
+								"This is still very early on in it's lifecycle, so if you notice any issues that should be fixed, or have some additions to add to the project that submit a pull request ",
+								_react2.default.createElement(
+									"a",
+									{ className: "link", href: "https://github.com/hamlim/boilerplate" },
+									"here."
+								)
+							)
+						),
+						_react2.default.createElement(
+							"section",
+							{ className: "opinionated" },
+							_react2.default.createElement(
+								"h3",
+								null,
+								"Opinionated:"
+							),
+							_react2.default.createElement(
+								"p",
+								null,
+								"Lets get one thing clear, if you are using this project to start a website, you should know that this is very opinionated."
+							)
+						),
+						_react2.default.createElement(
+							"section",
+							{ className: "how-to" },
+							_react2.default.createElement(
+								"h3",
+								null,
+								"How do I use it?"
+							),
+							_react2.default.createElement(
+								"p",
+								null,
+								"Well to be honest I am not 100% sure, I think you can simply clone this ",
+								_react2.default.createElement(
+									"a",
+									{ href: "https://github.com/hamlim/boilerplate", className: "link" },
+									"repository"
+								),
+								" and then run:"
+							),
+							_react2.default.createElement(
+								"pre",
+								null,
+								_react2.default.createElement(
+									"code",
+									null,
+									"npm install"
+								)
+							),
+							_react2.default.createElement(
+								"p",
+								null,
+								"and follow that with a "
+							),
+							_react2.default.createElement(
+								"pre",
+								null,
+								_react2.default.createElement(
+									"code",
+									null,
+									"npm run webpack"
+								)
+							),
+							_react2.default.createElement(
+								"p",
+								null,
+								"but I am really not sure. ¯\\_(ツ)_/¯"
+							)
+						)
+					)
 				);
 			}
 		}]);
@@ -21522,12 +21633,21 @@
 		}
 	
 		_createClass(Footer, [{
-			key: 'render',
+			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
-					'h1',
-					null,
-					'Footer'
+					"footer",
+					{ className: "footer" },
+					_react2.default.createElement(
+						"p",
+						{ className: "escape--default" },
+						"© 2016 ",
+						_react2.default.createElement(
+							"a",
+							{ href: "https://matthamlin.me", className: "link" },
+							"Matt Hamlin"
+						)
+					)
 				);
 			}
 		}]);
@@ -21547,7 +21667,7 @@
 	var content = __webpack_require__(174);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(175)(content, {});
+	var update = __webpack_require__(176)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -21567,18 +21687,74 @@
 /* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(176)();
+	exports = module.exports = __webpack_require__(175)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, "*,\n*:before,\n*:after {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box; }\n\n/* Mobile first queries */\n/* Larger than mobile */\n/* Larger than phablet */\n/* Larger than tablet */\n/* Larger than desktop */\n/* Larger than Desktop HD */\n.grid {\n  display: flex; }\n  .grid-row {\n    flex-direction: row; }\n  .grid-column {\n    flex-direction: column; }\n  .grid-row-reverse {\n    flex-direction: row-reverse; }\n  .grid-column-reverse {\n    flex-direction: column-reverse; }\n  .grid-wrap {\n    flex-wrap: wrap; }\n  .grid-nowrap {\n    flex-wrap: nowrap; }\n  .grid-wrap-reverse {\n    flex-wrap: wrap-reverse; }\n  .grid-justify-start {\n    justify-content: flex-start; }\n  .grid-justify-end {\n    justify-content: flex-end; }\n  .grid-justify-center {\n    justify-content: center; }\n  .grid-justify-between {\n    justify-content: space-between; }\n  .grid-justify-around {\n    justify-content: space-around; }\n  .grid-align-items-start {\n    align-items: flex-start; }\n  .grid-align-items-end {\n    align-items: flex-end; }\n  .grid-align-items-center {\n    align-items: center; }\n  .grid-align-items-stretch {\n    align-items: stretch; }\n  .grid-align-items-baseline {\n    align-items: baseline; }\n  .grid-align-content-start {\n    align-content: flex-start; }\n  .grid-align-content-end {\n    align-content: flex-end; }\n  .grid-align-content-center {\n    align-content: center; }\n  .grid-align-content-stretch {\n    align-content: stretch; }\n  .grid-align-content-between {\n    align-content: space-between; }\n  .grid-align-content-around {\n    align-content: space-around; }\n\n.item-align-start {\n  align-self: flex-start; }\n\n.item-align-end {\n  align-self: flex-end; }\n\n.item-align-center {\n  align-self: center; }\n\n.item-align-baseline {\n  align-self: baseline; }\n\n.item-align-stretch {\n  align-self: stretch; }\n\nhtml {\n  font-size: calc(0.75em + 1vw);\n  line-height: 1;\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 300; }\n  @media screen and (min-width: 16.667em) {\n    html {\n      line-height: 1.1; } }\n  @media screen and (min-width: 22.197em) {\n    html {\n      line-height: 1.2; } }\n  @media screen and (min-width: 31.25em) {\n    html {\n      line-height: 1.4; } }\n  @media screen and (min-width: 41.667em) {\n    html {\n      line-height: 1.5; } }\n  @media screen and (min-width: 50em) {\n    html {\n      line-height: 1.6; } }\n\nh1 {\n  font-weight: 400; }\n  h1:not(.escape--default) {\n    font-size: calc(calc(0.75em + 1vw) * 1.7); }\n\nh2 {\n  font-weight: 400; }\n  h2:not(.escape--default) {\n    font-size: calc(calc(0.75em + 1vw) * 1.4); }\n\nh3 {\n  font-weight: 400; }\n  h3:not(.escape--default) {\n    font-size: calc(calc(0.75em + 1vw) * 1.1); }\n\nh4 {\n  font-weight: 400; }\n  h4:not(.escape--default) {\n    font-size: calc(calc(0.75em + 1vw) * 0.7); }\n\nh5 {\n  font-weight: 400; }\n  h5:not(.escape--default) {\n    font-size: calc(calc(0.75em + 1vw) * 0.5); }\n\nh6 {\n  font-weight: 400; }\n  h6:not(.escape--default) {\n    font-size: calc(calc(0.75em + 1vw) * 0.3); }\n\nsmall:not(.escape--default) {\n  font-size: calc(calc(0.75em + 1vw) * 0.2); }\n\ni:not(.escape--default), em:not(.escape--default) {\n  font-style: italic; }\n\ni.escape--default, em.escape--default {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: inherit;\n  font: inherit;\n  vertical-align: baseline; }\n\nh1:not(.escape--default), h2:not(.escape--default), h3:not(.escape--default), h4:not(.escape--default), h5:not(.escape--default), h6:not(.escape--default), small:not(.escape--default), p:not(.escape--default), ul:not(.escape--default), ol:not(.escape--default) {\n  margin-bottom: 1em; }\n\nh1.escape--default, h2.escape--default, h3.escape--default, h4.escape--default, h5.escape--default, h6.escape--default, small.escape--default, p.escape--default, ul.escape--default, ol.escape--default {\n  margin: 0 0 .25em 0;\n  padding: 0;\n  border: 0;\n  font-size: inherit;\n  font: inherit;\n  vertical-align: baseline; }\n\nul:not(.escape--default), ol:not(.escape--default) {\n  list-style-position: inside; }\n\npre {\n  font-size: 70%;\n  position: relative;\n  margin-bottom: 1em;\n  border-right: solid 4px #A9DFBF;\n  border-left: solid 4px #A9DFBF;\n  font-family: \"Space Mono\", monospace;\n  background-color: #F2F1EF;\n  padding: 0 3em 0 1em; }\n  pre:after {\n    content: attr(data-lang);\n    position: absolute;\n    right: 0;\n    top: 0;\n    padding: 0 0.25em 0.25em 0.25em;\n    color: black;\n    background-color: #ccc;\n    z-index: 2;\n    border-bottom-left-radius: 4px; }\n  pre.inline-block {\n    padding: 0.25em;\n    display: inline-block; }\n    pre.inline-block:after {\n      display: none; }\n\nkbd, var {\n  font-family: \"Questrial\", sans-serif;\n  background-color: #D5DBDB;\n  color: #000;\n  font-size: 90%; }\n  kbd:not(.escape--defaults), var:not(.escape--defaults) {\n    font-family: \"Space Mono\", monospace;\n    background-color: #ccc;\n    border-radius: 0.25em;\n    color: #000;\n    font-size: 90%;\n    padding-top: 0.1em;\n    padding-bottom: 0.1em;\n    display: inline-block; }\n\nsup {\n  vertical-align: super;\n  font-size: smaller; }\n\n.tac {\n  text-align: center; }\n", ""]);
+	exports.push([module.id, "*,\n*:before,\n*:after {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box; }\n\n/* Mobile first queries */\n/* Larger than mobile */\n/* Larger than phablet */\n/* Larger than tablet */\n/* Larger than desktop */\n/* Larger than Desktop HD */\n.grid {\n  display: flex; }\n  .grid-row {\n    flex-direction: row; }\n  .grid-column {\n    flex-direction: column; }\n  .grid-row-reverse {\n    flex-direction: row-reverse; }\n  .grid-column-reverse {\n    flex-direction: column-reverse; }\n  .grid-wrap {\n    flex-wrap: wrap; }\n  .grid-nowrap {\n    flex-wrap: nowrap; }\n  .grid-wrap-reverse {\n    flex-wrap: wrap-reverse; }\n  .grid-justify-start {\n    justify-content: flex-start; }\n  .grid-justify-end {\n    justify-content: flex-end; }\n  .grid-justify-center {\n    justify-content: center; }\n  .grid-justify-between {\n    justify-content: space-between; }\n  .grid-justify-around {\n    justify-content: space-around; }\n  .grid-align-items-start {\n    align-items: flex-start; }\n  .grid-align-items-end {\n    align-items: flex-end; }\n  .grid-align-items-center {\n    align-items: center; }\n  .grid-align-items-stretch {\n    align-items: stretch; }\n  .grid-align-items-baseline {\n    align-items: baseline; }\n  .grid-align-content-start {\n    align-content: flex-start; }\n  .grid-align-content-end {\n    align-content: flex-end; }\n  .grid-align-content-center {\n    align-content: center; }\n  .grid-align-content-stretch {\n    align-content: stretch; }\n  .grid-align-content-between {\n    align-content: space-between; }\n  .grid-align-content-around {\n    align-content: space-around; }\n\n.item-align-start {\n  align-self: flex-start; }\n\n.item-align-end {\n  align-self: flex-end; }\n\n.item-align-center {\n  align-self: center; }\n\n.item-align-baseline {\n  align-self: baseline; }\n\n.item-align-stretch {\n  align-self: stretch; }\n\na {\n  text-decoration: none; }\n  a:hover, a:active {\n    text-decoration: none; }\n\n.link {\n  color: #2ECC71; }\n  .link:hover {\n    color: #F7CA18; }\n  .link--active {\n    color: #F5CBA7; }\n  .link--special {\n    color: #59ABE3; }\n    .link--special:hover {\n      color: #F9690E; }\n\n.clr--blue {\n  color: #59ABE3; }\n\n.bg--blue {\n  background-color: #59ABE3; }\n\n.clr--yellow {\n  color: #F7CA18; }\n\n.bg--yellow {\n  background-color: #F7CA18; }\n\n.clr--green {\n  color: #2ECC71; }\n\n.bg--green {\n  background-color: #2ECC71; }\n\n.page, .footer, .main, .menu {\n  margin: 0 auto; }\n  @media screen and (min-width: 16.667em) {\n    .page, .footer, .main, .menu {\n      width: 100vw; } }\n  @media screen and (min-width: 22.197em) {\n    .page, .footer, .main, .menu {\n      width: 90vw; } }\n  @media screen and (min-width: 31.25em) {\n    .page, .footer, .main, .menu {\n      width: 85vw; } }\n  @media screen and (min-width: 41.667em) {\n    .page, .footer, .main, .menu {\n      width: 70vw; } }\n  @media screen and (min-width: 50em) {\n    .page, .footer, .main, .menu {\n      width: 60vw; } }\n\nhtml {\n  font-size: calc(0.75em + 1vw);\n  line-height: 1;\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 300; }\n  @media screen and (min-width: 16.667em) {\n    html {\n      line-height: 1.1; } }\n  @media screen and (min-width: 22.197em) {\n    html {\n      line-height: 1.2; } }\n  @media screen and (min-width: 31.25em) {\n    html {\n      line-height: 1.4; } }\n  @media screen and (min-width: 41.667em) {\n    html {\n      line-height: 1.5; } }\n  @media screen and (min-width: 50em) {\n    html {\n      line-height: 1.6; } }\n\nh1 {\n  font-weight: 400; }\n  h1:not(.escape--default) {\n    font-size: calc(calc(0.75em + 1vw) * 1.7); }\n\nh2 {\n  font-weight: 400; }\n  h2:not(.escape--default) {\n    font-size: calc(calc(0.75em + 1vw) * 1.4); }\n\nh3 {\n  font-weight: 400; }\n  h3:not(.escape--default) {\n    font-size: calc(calc(0.75em + 1vw) * 1.1); }\n\nh4 {\n  font-weight: 400; }\n  h4:not(.escape--default) {\n    font-size: calc(calc(0.75em + 1vw) * 0.7); }\n\nh5 {\n  font-weight: 400; }\n  h5:not(.escape--default) {\n    font-size: calc(calc(0.75em + 1vw) * 0.5); }\n\nh6 {\n  font-weight: 400; }\n  h6:not(.escape--default) {\n    font-size: calc(calc(0.75em + 1vw) * 0.3); }\n\nsmall:not(.escape--default) {\n  font-size: calc(calc(0.75em + 1vw) * 0.2); }\n\ni:not(.escape--default), em:not(.escape--default) {\n  font-style: italic; }\n\ni.escape--default, em.escape--default {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: inherit;\n  font: inherit;\n  vertical-align: baseline; }\n\nh1:not(.escape--default), h2:not(.escape--default), h3:not(.escape--default), h4:not(.escape--default), h5:not(.escape--default), h6:not(.escape--default), small:not(.escape--default), p:not(.escape--default), ul:not(.escape--default), ol:not(.escape--default) {\n  margin-bottom: 1em; }\n\nh1.escape--default, h2.escape--default, h3.escape--default, h4.escape--default, h5.escape--default, h6.escape--default, small.escape--default, p.escape--default, ul.escape--default, ol.escape--default {\n  padding: 0 0 .25em 0;\n  margin: 0;\n  border: 0;\n  font-size: inherit;\n  font: inherit;\n  vertical-align: baseline; }\n\nul:not(.escape--default), ol:not(.escape--default) {\n  list-style-position: inside; }\n\npre {\n  font-size: 70%;\n  position: relative;\n  margin-bottom: 1em;\n  border-right: solid 4px #A9DFBF;\n  border-left: solid 4px #A9DFBF;\n  font-family: \"Space Mono\", monospace;\n  background-color: #F2F1EF;\n  padding: 0 3em 0 1em; }\n  pre:after {\n    content: attr(data-lang);\n    position: absolute;\n    right: 0;\n    top: 0;\n    padding: 0 0.25em 0.25em 0.25em;\n    color: black;\n    background-color: #ccc;\n    z-index: 2;\n    border-bottom-left-radius: 4px; }\n  pre.inline-block {\n    padding: 0.25em;\n    display: inline-block; }\n    pre.inline-block:after {\n      display: none; }\n\nkbd, var {\n  font-family: \"Questrial\", sans-serif;\n  background-color: #D5DBDB;\n  color: #000;\n  font-size: 90%; }\n  kbd:not(.escape--defaults), var:not(.escape--defaults) {\n    font-family: \"Space Mono\", monospace;\n    background-color: #ccc;\n    border-radius: 0.25em;\n    color: #000;\n    font-size: 90%;\n    padding-top: 0.1em;\n    padding-bottom: 0.1em;\n    display: inline-block; }\n\nsup {\n  vertical-align: super;\n  font-size: smaller; }\n\n.tac {\n  text-align: center; }\n\n.header-wrap {\n  height: 90vh;\n  width: 100vw;\n  background-color: #F7CA18;\n  color: #000; }\n\n.header {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-around;\n  height: 100%; }\n\n.page {\n  display: flex;\n  flex-direction: column; }\n\n.header, .main, .footer {\n  width: 60vw;\n  margin: 0 auto; }\n\n.main-wrap, .footer-wrap {\n  width: 100vw; }\n\n.main-wrap {\n  background-color: #fff;\n  color: #000; }\n\n.footer-wrap {\n  background-color: #59ABE3;\n  color: black;\n  align-self: flex-end; }\n", ""]);
 	
 	// exports
 
 
 /***/ },
 /* 175 */
+/***/ function(module, exports) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+	
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+	
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
+
+/***/ },
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -21827,62 +22003,6 @@
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
-
-
-/***/ },
-/* 176 */
-/***/ function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-	
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-	
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
 
 
 /***/ }
